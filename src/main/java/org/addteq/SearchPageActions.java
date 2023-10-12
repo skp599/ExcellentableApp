@@ -25,7 +25,6 @@ public class SearchPageActions {
 
         WebElement searchInput = driver.findElement(By.cssSelector("input[aria-label=\"Search\"]"));
         WebElement searchButton = driver.findElement(By.cssSelector("button[aria-label=\"Submit\"]"));
-        Thread.sleep(300);
         searchInput.sendKeys(searchText);
         searchButton.click();
     }

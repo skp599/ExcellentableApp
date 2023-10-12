@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-10-12T15:43:37.082Z",
+        "start_timestamp": "2023-10-12T18:36:56.626Z",
         "line": 3,
         "name": "Verify the search module with positive test case",
         "description": "",
@@ -11,7 +11,7 @@
         "after": [
           {
             "result": {
-              "duration": 61084019500,
+              "duration": 3121634200,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 18031508100,
+              "duration": 16372888200,
               "status": "passed"
             },
             "line": 4,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 10101171300,
+              "duration": 2382630400,
               "status": "passed"
             },
             "line": 5,
@@ -54,7 +54,7 @@
           },
           {
             "result": {
-              "duration": 3099647000,
+              "duration": 84517200,
               "status": "passed"
             },
             "line": 6,
@@ -66,7 +66,7 @@
           },
           {
             "result": {
-              "duration": 1242684100,
+              "duration": 1949945300,
               "status": "passed"
             },
             "line": 7,
@@ -85,7 +85,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-10-12T15:45:10.854Z",
+        "start_timestamp": "2023-10-12T18:37:20.727Z",
         "line": 9,
         "name": "Verify the search module with negative test case",
         "description": "",
@@ -93,7 +93,7 @@
         "after": [
           {
             "result": {
-              "duration": 61199940300,
+              "duration": 2196427400,
               "status": "passed"
             },
             "match": {
@@ -106,7 +106,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10008690900,
+              "duration": 8226800300,
               "status": "passed"
             },
             "line": 10,
@@ -118,7 +118,7 @@
           },
           {
             "result": {
-              "duration": 5331710000,
+              "duration": 5115879400,
               "status": "passed"
             },
             "line": 11,
@@ -136,7 +136,7 @@
           },
           {
             "result": {
-              "duration": 31657200,
+              "duration": 34524400,
               "status": "passed"
             },
             "line": 12,
