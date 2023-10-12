@@ -1,13 +1,16 @@
 package org.addteq.stepdefinitions;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.And;
 import org.addteq.SearchPageActions;
 import org.junit.Assert;
-
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.lang.Thread;
 import java.util.List;
 
 public class SearchPageSteps {
@@ -20,12 +23,13 @@ public class SearchPageSteps {
     }
 
     @When("I add the text {string} to the search input")
-    public void iAddTextToSearchInput(String searchText) {
+    public void iAddTextToSearchInput(String searchText) throws InterruptedException {
         pageActions.performSearch(searchText);
+        Thread.sleep(3000);
     }
 
     @Then("I should see correct search results")
-    public void iSeeCorrectSearchResults() {
+    public void iSeeCorrectSearchResults() throws InterruptedException {
         // Call verifyResultsList to get the search results
         List<String> searchResults = pageActions.verifyResultsList();
 
@@ -33,15 +37,15 @@ public class SearchPageSteps {
         for (String resultText : searchResults) {
             // Add assertions to verify the content of each search result
             // For example, you can use assertTrue to check if the result contains expected text
-            Assert.assertTrue(resultText.contains("test"));
-        }
+            Assert.assertTrue(resultText.contains("comments"));
+        Thread.sleep(3000);}
     }
 
     @And("the first result should take me to {string}")
-    public void firstResultTakesToPage() {
+    public void firstResultTakesToPage(String expectedUrl) {
         // Add code to click the first result and verify the page
         String actualUrl=pageActions.verifyFirstResult();
-        Assert.assertEquals("https://www.excellentable.com/help/test-page", actualUrl);
+        Assert.assertEquals("https://www.excellentable.com/help/comments", actualUrl);
     }
 
     @Then("I should see no search results")

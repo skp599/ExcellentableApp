@@ -13,7 +13,7 @@ public class SearchPageActions {
     private WebDriver driver;
 
     public SearchPageActions() {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/sukhd/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\shivk\\Downloads\\chromedriver-win64\\chromedriver-win64/chromedriver.exe");
         this.driver = new ChromeDriver();
     }
 
@@ -21,10 +21,11 @@ public class SearchPageActions {
         driver.get(url);
     }
 
-    public void performSearch(String searchText) {
+    public void performSearch(String searchText) throws InterruptedException {
+
         WebElement searchInput = driver.findElement(By.cssSelector("input[aria-label=\"Search\"]"));
         WebElement searchButton = driver.findElement(By.cssSelector("button[aria-label=\"Submit\"]"));
-
+        Thread.sleep(300);
         searchInput.sendKeys(searchText);
         searchButton.click();
     }
@@ -43,7 +44,7 @@ public class SearchPageActions {
 
     public String verifyFirstResult() {
         // Find and click the first search result
-        WebElement firstResult = driver.findElement(By.cssSelector("[href='https://www.excellentable.com/help/test-page']"));
+        WebElement firstResult = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div/div/ul/li[1]/div/a/em"));
         firstResult.click();
 
         String currentUrl = driver.getCurrentUrl();

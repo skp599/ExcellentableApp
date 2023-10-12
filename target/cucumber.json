@@ -1,0 +1,159 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-10-12T15:43:37.082Z",
+        "line": 3,
+        "name": "Verify the search module with positive test case",
+        "description": "",
+        "id": "search-module-verification;verify-the-search-module-with-positive-test-case",
+        "after": [
+          {
+            "result": {
+              "duration": 61084019500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 18031508100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on the Excellentable page",
+            "match": {
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.iAmOnTheExcellentablePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10101171300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I add the text \"Comments\" to the search input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Comments\"",
+                  "offset": 15
+                }
+              ],
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.iAddTextToSearchInput(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3099647000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should see correct search results",
+            "match": {
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.iSeeCorrectSearchResults()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1242684100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the first result should take me to \"Comments\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Comments\"",
+                  "offset": 35
+                }
+              ],
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.firstResultTakesToPage(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-10-12T15:45:10.854Z",
+        "line": 9,
+        "name": "Verify the search module with negative test case",
+        "description": "",
+        "id": "search-module-verification;verify-the-search-module-with-negative-test-case",
+        "after": [
+          {
+            "result": {
+              "duration": 61199940300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10008690900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am on the Excellentable page",
+            "match": {
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.iAmOnTheExcellentablePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5331710000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I add the text \"InvalidText\" to the search input",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"InvalidText\"",
+                  "offset": 15
+                }
+              ],
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.iAddTextToSearchInput(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31657200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should see no search results",
+            "match": {
+              "location": "org.addteq.stepdefinitions.SearchPageSteps.iSeeNoSearchResults()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Search Module Verification",
+    "description": "",
+    "id": "search-module-verification",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/SearchHelp.feature",
+    "tags": []
+  }
+]
