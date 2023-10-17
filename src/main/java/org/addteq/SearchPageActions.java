@@ -13,7 +13,7 @@ public class SearchPageActions {
     private WebDriver driver;
 
     public SearchPageActions() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\shivk\\Downloads\\chromedriver-win64\\chromedriver-win64/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver-win64/chromedriver.exe");
         this.driver = new ChromeDriver();
     }
 
@@ -27,6 +27,7 @@ public class SearchPageActions {
         WebElement searchButton = driver.findElement(By.cssSelector("button[aria-label=\"Submit\"]"));
         searchInput.sendKeys(searchText);
         searchButton.click();
+        Thread.sleep(2000);
     }
 
     public List<String> verifyResultsList( ) {
